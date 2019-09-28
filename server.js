@@ -1,3 +1,5 @@
+// import postMessage from './apicalls';
+
 const http = require('http');
 const url = require('url');
 const server = http.createServer();
@@ -11,6 +13,12 @@ let messages = [
   { 'id': 2, 'user': 'bob loblaw', 'message': 'check out my law blog' },
   { 'id': 3, 'user': 'lorem ipsum', 'message': 'dolor set amet' }
 ];
+
+// postMessage({
+//   'id': 4,
+//   'user': 'Brandy',
+//   'message': 'What?'
+// });
 
 const getAllMessages = (response) => {
   response.writeHead(200, { 'Content-Type': 'text/plain', 'Accept': 'application/json' });
