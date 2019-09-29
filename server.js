@@ -20,7 +20,7 @@ const getAllMessages = (response) => {
 
 const addMessage = (newMessage, response) => {
   const newMessages = [...messages, newMessage]
-  response.writeHead(200, { 'Content-Type': 'text/plain', 'Accept': 'application/json' });
+  response.writeHead(201, { 'Content-Type': 'text/plain', 'Accept': 'application/json' });
   response.write(JSON.stringify(newMessages));
   response.end();
 }
